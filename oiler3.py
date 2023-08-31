@@ -1,10 +1,15 @@
+factors = []
 
-a = 3
+def keepDividingBy2(x):
+    y = 2
+    while y < x:
+        while x % y == 0:
+            x /= y
+            factors.append(y)
+        y += 1
+    #print(x)
+    factors.append(x)
+    print(max(factors))
 
-print(6 % 2)
-print(6 % 3)
-print(5 % 2)
-print(5 % 3)
-
-print(15 % 2)
-print(15 % 3)
+keepDividingBy2(600851475143)
+#print(factors)
